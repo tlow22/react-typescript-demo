@@ -5,6 +5,8 @@ import { Heading } from './components/Heading';
 
 import './App.css';
 import { Oscar } from './components/Oscar';
+import { Button } from './components/Button';
+import { Input } from './components/Input';
 
 function App() {
   const personName = {
@@ -23,6 +25,8 @@ function App() {
           <Heading>Heading placed inside Oscar component</Heading>
         </Oscar>
       </div>
+      <Button handleClick={(event, id) => console.log('Button clicked', event, id)} />
+      <Input value='' handleChange={(event) => console.log(event)} />
     </div>
   );
 }
