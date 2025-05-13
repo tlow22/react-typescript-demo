@@ -6,22 +6,22 @@ type AuthUser = {
 }
 
 export const User = () => {
-    const [user, setUser] = useState<AuthUser | null>(null)
+    const [user, setUser] = useState<AuthUser>({} as AuthUser)
 
     const handleLogin = () => {setUser({
         name: 'Thaddeus',
         email: 'thaddeus@email.com',
     })} 
     const handleLogout = () => {
-        setUser(null)
+        setUser({} as AuthUser)
     } 
 
     return (
         <div>  
             <button onClick={handleLogin}>Login</button>
             <button onClick={handleLogout}>Logout</button>
-            <div>User name is {user?.name} </div>
-            <div>User email is {user?.email}</div>
+            <div>User name is {user.name} </div>
+            <div>User email is {user.email}</div>
         </div>
     )
     
